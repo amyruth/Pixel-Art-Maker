@@ -1,6 +1,5 @@
 let inputHeight = document.querySelector('#inputHeight');
 let inputWidth = document.querySelector('#inputWidth');
-let color = document.querySelector('#colorPicker');
 const pixelCanvas = document.querySelector('#pixelCanvas');
 let tableRow = '';
 let tableCell = '';
@@ -23,9 +22,17 @@ function makeGrid(row, col) {
 
 // grab values from inputs
 // run makeGrid()
-submitButton.addEventListener('click', function (event) {
-	event.preventDefault();
+submitButton.addEventListener('click', function (e) {
+	e.preventDefault();
 	let rows = inputHeight.value;
 	let columns = inputWidth.value;
 	makeGrid(rows, columns);
+});
+
+pixelCanvas.addEventListener('click', function (e) {
+	let color = document.getElementById('colorPicker').value;
+	console.log(color);
+	if(e.target && e.target.nodeName === 'TD'){
+		e.target.style.background = color;
+	}
 }, false);
