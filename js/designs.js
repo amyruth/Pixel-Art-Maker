@@ -24,6 +24,12 @@ function makeGrid(row, col) {
 // run makeGrid()
 submitButton.addEventListener('click', function (e) {
 	e.preventDefault();
+
+	//removes existing grid if present
+	while(pixelCanvas.hasChildNodes()){
+		pixelCanvas.removeChild(pixelCanvas.firstChild);
+	}
+
 	let rows = inputHeight.value;
 	let columns = inputWidth.value;
 	makeGrid(rows, columns);
