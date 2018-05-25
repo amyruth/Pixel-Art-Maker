@@ -29,10 +29,20 @@ submitButton.addEventListener('click', function (e) {
 	makeGrid(rows, columns);
 });
 
+
+// checks for td element click before changing color
 pixelCanvas.addEventListener('click', function (e) {
 	let color = document.getElementById('colorPicker').value;
 	console.log(color);
 	if(e.target && e.target.nodeName === 'TD'){
 		e.target.style.background = color;
 	}
-}, false);
+});
+
+// erase on right click
+pixelCanvas.addEventListener('contextmenu', function(e){
+	e.preventDefault();
+	if(e.target && e.target.nodeName === 'TD'){
+		e.target.style.background = 'transparent';
+	}
+});
