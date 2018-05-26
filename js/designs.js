@@ -36,7 +36,7 @@ submitButton.addEventListener('click', function (e) {
 });
 
 
-// checks for td element click before changing color
+// checks for td element on click before changing color
 pixelCanvas.addEventListener('click', function (e) {
 	let color = document.getElementById('colorPicker').value;
 	console.log(color);
