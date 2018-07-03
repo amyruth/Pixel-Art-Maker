@@ -6,3 +6,5 @@ Coded May 2018 by Amy Rutherford for the Udacity Front End Nanodegree program.
 ### Instructions
 Enter the grid size of your choice.
 Use the color picker to choose a color. Left click to fill a square, right click to erase.
+
+[Play the game here](https://amyruth.github.io/Pixel-Art-Maker/)
